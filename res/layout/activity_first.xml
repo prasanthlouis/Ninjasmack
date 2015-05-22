@@ -4,18 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.smashstack.FirstAct"
-    tools:ignore="MergeRootFrame" >
+    tools:ignore="MergeRootFrame" 
+    android:background="@drawable/dojo">
 
-    <Button
-        android:id="@+id/button1"
+    <ImageButton
+        android:id="@+id/imageButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="210dp"
-        android:text="Let's Play"
-        android:onClick="enter" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="244dp"
+        android:src="@drawable/enter"
+        android:onClick="enter"
+        android:background="@null" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Large Text"
+        android:textSize="60dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
 
