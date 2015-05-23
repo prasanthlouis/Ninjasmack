@@ -1,8 +1,10 @@
 package com.example.smashstack;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.psiuol21.smashstack.R;
 
 public class LastActivity extends ActionBarActivity {
@@ -47,7 +50,33 @@ TextView tv,tv2;
 	    
 	
 	}
+	
+	private boolean MyStartActivity(Intent aIntent) {
+	    try
+	    {
+	        startActivity(aIntent);
+	        return true;
+	    }
+	    catch (ActivityNotFoundException e)
+	    {
+	        return false;
+	    }
+	}
 
+	
+	public void rateus(View v)
+	{
+	Intent intent = new Intent(Intent.ACTION_VIEW);
+    //Try Google play
+    intent.setData(Uri.parse("market://details?id=com.psiuol21.smashstack"));
+    if (!MyStartActivity(intent)) {
+        //Market (Google play) app seems not installed, let's try to open a webbrowser
+        intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.psiuol21.smashstack"));
+        if (!MyStartActivity(intent)) {
+            //Well if this also fails, we have run out of options, inform the user.
+            Toast.makeText(this, "Could not open Android market, please install the market app.", Toast.LENGTH_SHORT).show();
+        }
+    }}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 

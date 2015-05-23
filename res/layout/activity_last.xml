@@ -14,7 +14,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:src="@drawable/rate"
-        android:background="@null" />
+        android:background="@null"
+        android:onClick="rateus" />
 
     <ImageButton
         android:id="@+id/imageButton1"

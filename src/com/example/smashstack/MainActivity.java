@@ -1,6 +1,7 @@
 package com.example.smashstack;
 
 import java.util.Random;
+
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
+
 import com.psiuol21.smashstack.R;
 
 public class MainActivity extends ActionBarActivity {
@@ -80,7 +81,7 @@ public class MainActivity extends ActionBarActivity {
 		 thread.start();
 		
 		
-		
+		 
 
 		
 		final Handler handler = new Handler();
@@ -105,6 +106,11 @@ public class MainActivity extends ActionBarActivity {
 
 	
 	}
+	
+
+
+	 
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
