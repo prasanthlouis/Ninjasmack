@@ -1,2 +1,3 @@
 # Smashstack
-A cut and smash up android game (Working on it)
+A cut and smash up android game
+Just swipe accordingly to smack the ninja
